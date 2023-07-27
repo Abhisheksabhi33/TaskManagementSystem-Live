@@ -131,7 +131,7 @@ exports.editTask = (req, res, next) => {
       //assign values
       task.title = req.body.title || task.title;
       task.date = req.body.date || task.date;
-      task.notes = [...task.notes, req.body.notes];
+      task.notes = req.body.notes || task.notes; 
       task.Priority = req.body.Priority || task.Priority;
       task.status = req.body.status || task.status;
 
